@@ -1,0 +1,92 @@
+/*MENU HAMBURGUESA - INICIO*/
+/* se asigna el margen y el tipo de letra*/
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+/* se le asigna un ancho y un color de fondo*/
+header {
+    width: 100%;
+    background: #2f4f4f;
+}
+
+/*desaparecer el check list*/
+#btn_menu {
+    display: none; /* lo desaparece del espacio asignado*/ 
+}
+
+/* ahora se modifica la imagen "label" dentro del header*/
+header label {
+    display: none; /*esconde la imagen "label"*/
+    width: 20px;
+    height: 20px;
+    padding: 15px;
+    border-right: 1px solid #fff ;    /*le pone borde a la derecha a la imagen "label"*/
+}
+
+header label:hover { /* es lo que va a hacer cuando pase el mouse */
+    cursor: pointer; /* le pone la manito cuando pasa por la imagen*/
+    background: rgba(0,0,0,0.3); /* le pone fondo a la accion*/
+}
+
+
+.menu ul {
+    margin: 0;
+    list-style: none; /* le quita los puntos al menu*/
+    padding: 0; /*quita el relleno de la izquierda*/
+    display: flex; /* para que que llos "LI" dentro del "UL" sean cajas flexibles  */
+    justify-content: flex-end; /* para poner el menu a la derecha*/
+}
+
+.menu li {    
+    border-left: 1px solid #fff; /*DEFINIENDO EL BORDE VISUAL DEL "LI"*/
+}
+
+.menu li :hover {/*acción que hace cuando pasa el mouse por el elemento*/
+    background: red;  /*le pone sombra a la acción*/
+}
+
+.menu li a { /* modifica las a dentro de los "LI"*/
+    display: block; 
+    padding: 20px 20px;
+    color: #fff;
+    text-decoration: none ;
+}
+
+main {
+    padding: 20px;
+}
+
+.menu2 ul a {
+    display: block;
+}
+
+@media (max-width:  900px ){ /* PARA QUE CUANDO LLEGUE A ESE TAMAÑO DE PANTALLA (VALOR TABLET) SE REDUZCA SE ESCONDAN LAS LETRAS*/
+    
+    header label {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        background: #2f4f4f;
+        width: 70%;
+        margin-left: -70%; /* para que se esconda el menu cuando llegue a ese tamaño de pantalla*/
+        transition: all 0.5s;
+    }
+
+    .menu ul { /* para poner el menu en forma posicion de columna*/
+        flex-direction: column;
+    }
+
+    .menu li { /* modificando visualmente el "LI"*/    
+        border-top: 1px solid #fff;
+    }
+
+    #btn_menu:checked ~ .menu {   /* cuando haya un check en el boton busca la clase menu*/
+        margin: 0;
+    }
+} 
+
+
+/*FIN MENU HAMBURGUESA*/
