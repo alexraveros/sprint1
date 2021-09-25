@@ -11,7 +11,7 @@ header {
 }
 
 /*desaparecer el check list*/
-#btn_menu {
+#button_principal {
     display: none; /* lo desaparece del espacio asignado*/ 
 }
 
@@ -35,7 +35,7 @@ header label:hover { /* es lo que va a hacer cuando pase el mouse */
     list-style: none; /* le quita los puntos al menu*/
     padding: 0; /*quita el relleno de la izquierda*/
     display: flex; /* para que que llos "LI" dentro del "UL" sean cajas flexibles  */
-    justify-content: flex-end; /* para poner el menu a la derecha*/
+    /*justify-content: flex-end; /* para poner el menu a la derecha*/
 }
 
 .menu li {    
@@ -61,7 +61,8 @@ main {
     display: block;
 }
 
-@media (max-width:  900px ){ /* PARA QUE CUANDO LLEGUE A ESE TAMAÑO DE PANTALLA (VALOR TABLET) SE REDUZCA SE ESCONDAN LAS LETRAS*/
+
+@media (max-width: 2000px ){ /* PARA QUE CUANDO LLEGUE A ESE TAMAÑO DE PANTALLA (VALOR TABLET) SE REDUZCA SE ESCONDAN LAS LETRAS*/
     
     header label {
         display: block;
@@ -70,7 +71,7 @@ main {
     .menu {
         position: absolute;
         background: #2f4f4f;
-        width: 70%;
+        width: 20%;
         margin-left: -70%; /* para que se esconda el menu cuando llegue a ese tamaño de pantalla*/
         transition: all 0.5s;
     }
@@ -83,7 +84,7 @@ main {
         border-top: 1px solid #fff;
     }
 
-    #btn_menu:checked ~ .menu {   /* cuando haya un check en el boton busca la clase menu*/
+    #button_principal:checked ~ .menu {   /* cuando haya un check en el boton busca la clase menu*/
         margin: 0;
     }
 } 
