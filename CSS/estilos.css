@@ -44,6 +44,7 @@ header label:hover { /* es lo que va a hacer cuando pase el mouse */
 
 .menu li :hover {/*acción que hace cuando pasa el mouse por el elemento*/
     background: red;  /*le pone sombra a la acción*/
+    border-radius: 20px;
 }
 
 .menu li a { /* modifica las a dentro de los "LI"*/
