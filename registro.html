@@ -5,47 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="stylesheet" href="./CSS/estilos.css">
+    <link rel="stylesheet" href="./estilos.css">
     <link rel="stylesheet" href="./index.html">
+
 
 </head>
 <body>
     <header>
-        <center><h1>INGRESE LOS SIGUIENTES DATOS</h1></center>
-    </header>
+        
+        <input type="checkbox" id="button_principal">
+        <label for="button_principal">&#9776;</label>
+        
+        <nav class="menu">
+            <ul>
+                <li><a href="./registro.html">Registro</a></li>      
+                <li><a href="./index.html">Servicios</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Clientes</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+    </header> 
     <BR></BR>
     
-    <div id="formRegistro">
-        <form action="">
+    <div class="FormRegistro" id="formRegistro">
+        <form action="" class="formulario" id="formulario">
+            
             <center>
-                <label for="campoNombre">Nombre
-                    <input type="text" id="campoNombre" maxlength="20" placeholder="Escribe tu nombre"> 
-                </label>
-                <br><br>
-                <label for="campoApellido">Apellido
-                    <input type="text" id="campoApellido" maxlength="20" placeholder="Escribe tu apellido"> 
-                </label>
-                <br><br>
-                <label for="campoCorreoElectronico">Correo electronico
-                    <input type="text" id="campoCorreoElectronico" maxlength="20" placeholder="Escribe tu correo electronico"> 
-                </label>
-                <br><br>
-                <label for="campoConfirmacionCorreoElectronico">Confirmacion correo electronico
-                    <input type="text" id="campoConfirmacionCorreoElectronico" maxlength="20" placeholder="Confirmación de correo electronico"> 
-                </label>
-                <br><br>
-                <label for="campoPais">Pais
-                    <input type="text" id="campoPais" maxlength="20" placeholder="Escribe tu nombre"> 
-                </label>
-                <br><br>
-                <label for="campoCiudad">Ciudad
-                    <input type="text" id="campoCiudad" maxlength="20" placeholder="Escribe tu nombre"> 
-                </label>
-                <br><br>
-        </center>
+                <h2>FORMULARIO DE REGISTRO</h2>
+                <br>                
+                <input class="controls" type="text" id="campoNombre" maxlength="20" placeholder="Escribe tu nombre"> 
+                <input class="controls" type="text" id="campoApellido" maxlength="20" placeholder="Escribe tu apellido"> 
+                <input class="controls" type="email" id="campoCorreoElectronico" maxlength="20" placeholder="Escribe tu correo electronico"> 
+                <input class="controls" type="email" id="campoConfirmarCorreo" maxlength="20" placeholder="Confirmación de correo electronico"> 
+                <input class="controls" type="text" id="campoPais" maxlength="20" placeholder="Pais de origen"> 
+                <input class="controls" type="text" id="campoCiudad" maxlength="20" placeholder="Ciudad de residencia"> 
+                <p>Estoy de acuerdo con los <a href="#">Terminos y condiciones</a></p>
+                <input class="botons" type="submit" value="Registrar">
 
+                <p><a href="#"> ¿Ya tengo cuenta?</a></p>
+            </center>
 
         </form>
     </div>
+    <script src="./form5.js"></script>
+
 </body>
 </html>
